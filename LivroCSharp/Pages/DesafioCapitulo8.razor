@@ -1,0 +1,29 @@
+﻿@page "/DesafioCapitulo8"
+
+<h3>DesafioCapitulo8</h3>
+
+<label>Distância percorrer em quilômetros</label>
+<input @bind="distancia" class="form-control"/>
+<br/>
+
+<label>Velocidade média(km/hora)</label>
+<input @bind="velocidade" class="form-control" />
+<br/>
+
+<label>Tempo estimado em horas</label>
+<input @bind="horas" class="form-control" />
+<br/>
+<button @onclick="CalcularVelocidade" class="btn btn-primary">Calcular Tempo</button>
+<br/>
+
+@code {
+    double distancia;
+    double velocidade;
+    double horas;
+
+    void CalcularVelocidade()
+    {
+        horas = distancia / velocidade;
+    }
+
+}
