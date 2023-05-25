@@ -1,0 +1,33 @@
+﻿@page "/desafio01"
+
+<h3>Determina se número é par ou ímpar</h3>
+
+<div class="form-group">
+    <label>Informe um número</label>
+    <input @bind="original" class="form-control"/>
+ </div>
+
+ <br/>
+
+ <button @onclick="verificar" class="btn btn-primary">Verifica Número</button>
+
+ <br />
+<label>O Número informado é:<b>@resultado</b></label>
+@code {
+    int original;
+    string resultado;
+    
+    void verificar()
+    {
+            
+        int r = original / 2;
+        if(original == (r*2))
+        {
+            resultado = "E par";
+        }
+        else
+        {
+            resultado = "E ímpar";
+        }
+    }
+}
